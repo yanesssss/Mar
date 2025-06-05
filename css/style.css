@@ -1,0 +1,236 @@
+:root {
+    --primary: rgb(255, 255, 255);
+    --secondary: rgb(46, 231, 139);
+    --text: white;
+    --accent: rgb(16, 114, 194);
+    --border: rgb(15, 15, 15);
+  }
+  
+  * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--primary);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  /* -------------------- About Me -------------------- */
+  section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .profile-pic {
+    display: block;
+    margin: 0 auto 20px auto; 
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* -------------------- Achievements -------------------- */
+  #achievements {
+    padding: 2rem;
+    background-color: rgb(61, 228, 131);
+    color: #333333; 
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .achievement-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-left: 5px solid #333;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #444;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  .achievement-item:nth-child(1) { animation-delay: 0.2s; }
+  .achievement-item:nth-child(2) { animation-delay: 0.4s; }
+  .achievement-item:nth-child(3) { animation-delay: 0.6s; }
+  
+  .achievement-item h3 {
+    margin: 0.5rem 0;
+    color: #222; 
+  }
+  
+  .achievement-item p {
+    margin: 0.5rem 0;
+    color: #555; 
+  }
+  
+  /* -------------------- Projects -------------------- */
+  .project-card {
+    background-color: rgb(255, 255, 255);
+    color: rgb(15, 15, 15); 
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--accent);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  }
+  
+  /* -------------------- Skills -------------------- */
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  
+  .skills-list li {
+    background: rgb(255, 255, 255);
+    color: rgb(15, 15, 15);
+    padding: 10px;
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    transition: transform 0.2s;
+  }
+  
+  .skills-list li:hover {
+    transform: scale(1.03);
+  }
+  
+  /* -------------------- Experience -------------------- */
+  #experience {
+    padding: 40px 20px;
+    background-color: rgb(61, 228, 131);
+    text-align: center;
+  }
+  
+  #experience h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .experience-item {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .experience-item img.profile-pic {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .experience-item h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .experience-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* -------------------- SMAW OJT -------------------- */
+  #smaw-ojt {
+    padding: 40px 20px;
+    background-color: rgb(61, 228, 131); 
+    text-align: center;
+  }
+  
+  #smaw-ojt h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  /* -------------------- Header & Footer -------------------- */
+  header {
+    background-color: var(--secondary);
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  nav a {
+    color: var(--accent);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #2aa1e6;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--secondary);
+    border-top: 1px solid var(--border);
+  }
+  
+  /* -------------------- Animations -------------------- */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .cursor {
+    display: inline-block;
+    background-color: black;
+    width: 2px;
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* -------------------- Responsive -------------------- */
+  @media (max-width: 600px) {
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .profile-pic {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  
